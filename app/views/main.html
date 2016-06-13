@@ -1,0 +1,78 @@
+
+<div class="container">
+<h2>Table</h2>
+<table  border=1px class="table">
+    <tr> 
+      <th>name</th>
+      <th>designation</th>
+      <th>email</th>
+      <th>skills</th>
+      <th>status</th>
+      <th>remarks</th>
+      <th> </th>
+    </tr>
+    <tr ng-repeat="employee in employees">
+	<td>{{employee.name}}</td>
+	<td>{{employee.designation}}</td>
+	<td>{{employee.email}}</td>
+	<td>{{employee.skills}}</td>
+	<td>{{employee.status}}</td>
+	<td>{{employee.remarks}}</td>
+	<td>
+	    <input  type="button" value="x" class="btn btn-primary" ng-click="removeRow(emploee.name)"/>
+	</td>
+     </tr>
+  </table>
+<form class="form-horizontal" role="form" ng-submit="addRow()">
+	<div class="form-group">
+		<label class="col-md-2 control-label">Name</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" name="name"
+				ng-model="name" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-2 control-label">Designation</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" name="designation"
+				ng-model="designation" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-2 control-label">Email</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" name="email"
+				ng-model="email" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-2 control-label">Skills</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" name="skills"
+				ng-model="skills" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-2 control-label">Status</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" name="status"
+				ng-model="status" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-2 control-label">Remarks</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" name="remarks"
+				ng-model="remarks" />
+		</div>
+	</div>
+	<div class="form-group">								
+		<div style="padding-left:110px">
+			<input type="submit" value="ADD" class="btn btn-primary"/>
+		</div>
+	</div>
+</form>
+
+
+
+</div>
